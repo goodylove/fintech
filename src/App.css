@@ -1,38 +1,31 @@
-.App {
-  text-align: center;
+* {
+  font-family: poppins;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s ease;
 }
+body {
+  width: 100vw;
+  overflow-y: scroll;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  overflow-x: hidden;
 }
+.hero {
+  background-image: url("./assets/bg.png"), url("./assets/african-american.png");
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-repeat: no-repeat, repeat-x, repeat-y;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.is-open {
+  visibility: visible;
 }
-
-.App-link {
-  color: #61dafb;
+.is-closed {
+  visibility: hidden;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width: 768px) {
+  .hero {
+    background-image: url("./assets/african-american.png"),
+      url("./assets/bg.png");
+    opacity: 0.9;
   }
 }
