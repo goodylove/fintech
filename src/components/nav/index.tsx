@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import FoyLogo from "../../assets/logoa 1.png";
 import Button from "../button/index";
@@ -8,8 +8,25 @@ import { Link } from "react-router-dom";
 // React.FunctionComponent<CommonBurgerProps>
 const Nav = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [scrollPage, setScrollPage] = useState(0);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    setScrollPage(scrollPosition);
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <nav className="flex bg-white p-3 absolute top-4 w-full justify-between items-center opacity-[0.8] left-0 z-10">
+    <nav
+      className={`flex bg-white p-3 fixed    w-full justify-between items-center  left-0 z-10 ${
+        scrollPage >= 24 ? "top-0 opacity-[1]" : "top-4 opacity-[0.8] "
+      } `}
+    >
       <div className="md:w-[20%] w-[35%]">
         <img src={FoyLogo} alt="log" className="text-purple" />
       </div>

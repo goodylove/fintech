@@ -12,30 +12,23 @@ type InvestProps = {
   className?: string;
 };
 
-const Investment = ({
-  text,
-  button,
-  img,
-  title,
-  subTitle,
-  className,
-}: InvestProps) => {
+const Investment = ({ text, button, img, title, subTitle }: InvestProps) => {
   return (
-    <section className="flex justify-center w-full md:m-10">
-      <div className="flex w-full  md:w-[90%] md:justify-between  items-center md:flex-row-reverse  flex-col">
-        <div className=" w-[70%] md:p-3">
+    <section className="flex justify-center w-full md:m-3">
+      <div className="flex w-full  md:w-[86%] md:justify-around  items-center md:flex-row-reverse  flex-col p-5">
+        <div className="">
           <h3>{title}</h3>
           <h2 className="md:text-[30px] font-[800] text-black leading-[50px] text[23px]">
             {subTitle}
           </h2>
-          <p className="md:w-[385px] leading-[24px] font-[500] text-[16px] w-[242px]">
+          <div className="md:w-[385px] w-[332px] leading-[24px] font-[500] text-[16px] ">
             {text}
-          </p>
+          </div>
 
           {button}
         </div>
-        <div className="40%">
-          <img src={img} alt="" />
+        <div className=" mt-5 mb-5">
+          <img src={img} alt="" className="rounded-bl-[50px]" />
         </div>
       </div>
     </section>
