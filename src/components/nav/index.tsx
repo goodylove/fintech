@@ -1,30 +1,59 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import FoyLogo from "../../assets/logoa 1.png";
 import Button from "../button/index";
 import { Fade as Hamburger } from "hamburger-react";
+import { Link } from "react-router-dom";
 
 // React.FunctionComponent<CommonBurgerProps>
 const Nav = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [scrollPage, setScrollPage] = useState(0);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    setScrollPage(scrollPosition);
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <nav className="flex bg-white p-3 absolute top-4 w-full justify-between items-center opacity-[0.8] left-0">
+    <nav
+      className={`flex bg-white p-3 fixed    w-full justify-between items-center  left-0 z-10 ${
+        scrollPage >= 24 ? "top-0 opacity-[1]" : "top-4 opacity-[0.8] "
+      } `}
+    >
       <div className="md:w-[20%] w-[35%]">
         <img src={FoyLogo} alt="log" className="text-purple" />
       </div>
       <div className=" hidden md:flex justify-around  w-[80%]">
         <ul className="flex justify-around font-[400] text-[18px] leading-[24px] w-[45%] items-center cursor-pointer">
-          <li>Home</li>
-          <li>About</li>
-          <li className="flex items-center">
-            Service <MdOutlineKeyboardArrowDown />
+          <li>
+            <Link to="/">Home</Link>
           </li>
-          <li>FAQ</li>
-          <li>contact</li>
+          <li>
+            {" "}
+            <Link to="/about">About</Link>
+          </li>
+          <li className="flex items-center">
+            <Link to="/service" className="flex items-center">
+              Service <MdOutlineKeyboardArrowDown />
+            </Link>
+          </li>
+          <li>
+            <Link to="/faqpage">FAQ</Link>
+          </li>
+          <li>
+            <Link to="/contact">contact</Link>
+          </li>
         </ul>
         <Button
           text="Apply now"
-          className="bg-purple text-white w-[181px] h-[50px] rounded"
+          className="bg-purple text-white w-[167px] h-[50px] rounded"
         />
       </div>
       <div className="md:hidden pr-3">
@@ -46,19 +75,19 @@ const Nav = () => {
       >
         <ul className="flex flex-col  justify-between  font-[400] text-[18px] leading-[24px] w-[45%]  cursor-pointer">
           <li className="p-5">
-            <a href=""> Home</a>
+            <Link to="/"> Home</Link>
           </li>
           <li className="p-5">
-            <a href="/about"> About</a>
+            <Link to="/about"> About</Link>
           </li>
           <li className="flex items-center p-5">
-            <a href=""> Service</a> <MdOutlineKeyboardArrowDown />
+            <Link to="/service"> Service</Link> <MdOutlineKeyboardArrowDown />
           </li>
           <li className="p-5">
-            <a href="/faq">FAQ</a>
+            <Link to="/faqpage">FAQ</Link>
           </li>
           <li className="p-5">
-            <a href="/service"> Contact</a>
+            <Link to="/contact"> Contact</Link>
           </li>
           <li>
             <Button
