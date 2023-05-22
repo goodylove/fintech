@@ -22,6 +22,10 @@ body {
 .is-closed {
   visibility: hidden;
 }
+nav a.active {
+  color: purple;
+  text-decoration: underline;
+}
 @media screen and (max-width: 768px) {
   .hero {
     background-image: url("./assets/african-american.png"),

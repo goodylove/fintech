@@ -14,7 +14,7 @@ const About = () => {
     <main className="w-full">
       <section className="mt-5 md:h-[25%] flex justify-center items-center h-[13%]  ">
         <div
-          className="flex justify-center flex-col
+          className="flex justify-center flex-col p-2
         "
         >
           <article className="text-[40px] text-purple font-[500] leading-[40px] text-center m-2">
