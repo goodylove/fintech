@@ -179,8 +179,11 @@ function Home() {
           </div>
         </section>
         {/* faq section */}
-        <section className="flex justify-center ">
-          <FAQ />
+        <section className="flex justify-center m-5 ">
+          <div className="flex justify-center flex-col items-center w-full">
+            <h3 className="text-center font-[800] ">FAQS</h3>
+            <FAQ />
+          </div>
         </section>
         {/*footer section  */}
         <Footer />
