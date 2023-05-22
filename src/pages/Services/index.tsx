@@ -1,14 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 
 const Service = () => {
-  return (
-    <div>
-      service
-      <Link to="microlending">Product</Link>
-      <Link to="realestate">Product Details</Link>
-      <Outlet />
-    </div>
-  );
+  return <div>service</div>;
 };
 
 export default Service;
