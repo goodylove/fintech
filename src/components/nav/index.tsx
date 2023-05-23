@@ -127,14 +127,21 @@ const Nav = () => {
               onMouseLeave={() => setDropdown(false)}
             >
               <ul className="flex flex-col justify-center text-[16px] font-[700] pt-2 ">
-                <li className="pt-2 pb-1 pl-1 hover:p-0">Microlending</li>
                 <li className="pt-2 pb-1 pl-1 hover:p-0">
-                  {" "}
-                  Bureau-de-change(BDC)
+                  <Link to="services/microlending">Microlending</Link>
                 </li>
-                <li className="pt-1 pb-1 pl-1 hover:p-0"> Investments</li>
-                <li className="pt-1 pb-1 pl-1 hover:p-0"> Real Estate</li>
-                <li className="pt-1 pb-1 pl-1 hover:p-0"> Procurement</li>
+                <li className="pt-2 pb-1 pl-1 hover:p-0">
+                  <Link to="services/bdc">Bureau-de-change(BDC)</Link>
+                </li>
+                <li className="pt-1 pb-1 pl-1 hover:p-0">
+                  <Link to="services/investmentpage">Investments</Link>
+                </li>
+                <li className="pt-1 pb-1 pl-1 hover:p-0">
+                  <Link to="services/realestate"> Real Estate</Link>
+                </li>
+                <li className="pt-1 pb-1 pl-1 hover:p-0">
+                  <Link to="services/procurment">Procurement</Link>
+                </li>
               </ul>
             </div>
           </li>

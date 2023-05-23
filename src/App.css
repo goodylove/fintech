@@ -16,6 +16,40 @@ body {
 
   background-repeat: no-repeat, repeat-x, repeat-y;
 }
+.anmi {
+  transition: 0.5s;
+  animation: linear spin 0.5s;
+}
+.business {
+  transition: 0.5s;
+  animation: 0.5s forwards scal;
+}
+
+@keyframes scal {
+  0% {
+    transform: translateY(100px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* .microlending {
   background-image: url("./assets/4.png");
   height: 400px;
