@@ -25,7 +25,7 @@ const About = () => {
           className="flex justify-center flex-col p-2
         "
         >
-          <article className="text-[40px] text-purple font-[500] leading-[40px] text-center m-2">
+          <article className="text-[40px] text-purple font-[500] leading-[40px] text-center mt-3 mb-3">
             Were changing the way
             <br /> people think about Investment
           </article>

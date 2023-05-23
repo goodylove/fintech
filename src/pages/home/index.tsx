@@ -29,12 +29,12 @@ function Home() {
     <div className="App w-[100%] flex justify-center">
       <div className="w-[100%]">
         {/* section one hero section */}
-        <section className="hero xl:h-[18%] w-full relative md:p-5 p-0 h-[13%] md:h-[15%]">
+        <section className="hero xl:h-[19%] w-full relative md:p-5 p-0 h-[13%] md:h-[15%]">
           {/* <Nav /> */}
 
           <div className="h-[97%] flex justify-center flex-col items-start w-full md:pl-[70px] ">
             <div className="p-[20px] mt-5">
-              <h2 className="leading-[26px] text-[24px] text-white mt-2">
+              <h2 className="leading-[26px] text-[24px] text-white mt-2 ">
                 We prioritize providing the
               </h2>
               <div className=" text-[34px] md:text-[40px]  leading-[40px]  md:leading-[50px] text-white md:w-[474px] md:h-[100px] mt-3 font-[700]">

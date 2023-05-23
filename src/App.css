@@ -33,7 +33,7 @@ body {
     transform: translateY(30px);
   }
   100% {
-    transform: translateY(-40px);
+    transform: translateY(-20px);
   }
 }
 @keyframes spin {
