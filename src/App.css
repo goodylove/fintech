@@ -16,6 +16,13 @@ body {
 
   background-repeat: no-repeat, repeat-x, repeat-y;
 }
+/* .microlending {
+  background-image: url("./assets/4.png");
+  height: 400px;
+  margin-top: 40px;
+
+  background-repeat: no-repeat, repeat-x, repeat-y;
+} */
 .is-open {
   visibility: visible;
 }

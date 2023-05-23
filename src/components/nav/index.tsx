@@ -49,25 +49,25 @@ const Nav = () => {
                 />
               </span>
               <div
-                className={`w-[185px] bg-white   text-purple h-auto absolute top-[15px] z-[-20] left-[0px] rounded-md shadow-md transition ${
+                className={`w-[185px] bg-white   text-purple h-auto absolute top-[20px] z-[-20] left-[0px] rounded-md shadow-md transition ${
                   dropdown ? "visible" : "hidden  "
                 }`}
                 onMouseLeave={() => setDropdown(false)}
               >
                 <ul className="flex flex-col justify-center text-[16px] font-[700] pt-2 ">
-                  <li className="pt-2 pb-1 pl-1 hover:p-0">
+                  <li className="pt-2 pb-1 pl-1">
                     <Link to="services/microlending">Microlending</Link>
                   </li>
-                  <li className="pt-2 pb-1 pl-1 hover:p-0">
+                  <li className="pt-2 pb-1 pl-1">
                     <Link to="services/bdc">Bureau-de-change(BDC)</Link>
                   </li>
-                  <li className="pt-1 pb-1 pl-1 hover:p-0">
+                  <li className="pt-1 pb-1 pl-1">
                     <Link to="services/investmentpage">Investments</Link>
                   </li>
-                  <li className="pt-1 pb-1 pl-1 hover:p-0">
+                  <li className="pt-1 pb-1 pl-1">
                     <Link to="services/realestate"> Real Estate</Link>
                   </li>
-                  <li className="pt-1 pb-1 pl-1 hover:p-0">
+                  <li className="pt-1 pb-1 pl-1">
                     <Link to="services/procurment">Procurement</Link>
                   </li>
                 </ul>

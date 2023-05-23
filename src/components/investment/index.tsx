@@ -7,7 +7,7 @@ type InvestProps = {
   button?: JSX.Element;
   text: string | JSX.Element;
   img: string;
-  title: string | JSX.Element;
+  title?: string | JSX.Element;
   subTitle?: string;
   className?: string;
 };
@@ -15,7 +15,7 @@ type InvestProps = {
 const Investment = ({ text, button, img, title, subTitle }: InvestProps) => {
   return (
     <section className="flex justify-center w-full md:m-3">
-      <div className="flex w-full  md:w-[86%] md:justify-around  items-center md:flex-row-reverse  flex-col p-5">
+      <div className="flex w-full  md:w-[90%] md:justify-between  items-center md:flex-row-reverse  flex-col pl-5 pr-5">
         <div className="">
           <h3>{title}</h3>
           <h2 className="md:text-[30px] font-[800] text-black leading-[50px] text[23px]">

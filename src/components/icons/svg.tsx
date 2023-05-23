@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 // all the icons are imported as svg
 
 // business satistices icons, to access any  icon ...businessStaticsSvg.the icon name
@@ -36,6 +36,34 @@ export const servicesSvg = {
   },
 };
 
+export const bdc = {
+  bdc() {
+    return (
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 14 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4.78369 6.04481L6.67549 7.9366L12.9815 1.63062"
+          stroke="#901D78"
+          stroke-width="1.81"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M12.3508 6.67539V11.0896C12.3508 11.4241 12.2179 11.7449 11.9814 11.9814C11.7449 12.2179 11.4241 12.3508 11.0896 12.3508H2.2612C1.92671 12.3508 1.60592 12.2179 1.3694 11.9814C1.13288 11.7449 1 11.4241 1 11.0896V2.2612C1 1.92671 1.13288 1.60592 1.3694 1.3694C1.60592 1.13288 1.92671 1 2.2612 1H9.19778"
+          stroke="#901D78"
+          stroke-width="1.81"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    );
+  },
+};
 // socialmedia icons
 
 export const socialmediaIcons = {
