@@ -16,7 +16,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App w-[100%] flex justify-center relative">
+    <div className="App w-[100%] flex justify-center ">
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />

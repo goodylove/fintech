@@ -4,21 +4,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   transition: 0.3s ease;
   overflow-x: hidden;
 }
+
 .hero {
   background-image: url('./assets/bg.png'), url('./assets/african-american.png');
 
   background-repeat: no-repeat, repeat-x, repeat-y;
 }
 .anmi {
-  transition: 0.5s;
-  animation: linear spin 0.5s;
+  animation: spin 0.5s forwards;
 }
 .business {
-  transition: 0.5s;
   animation: 0.5s forwards scal;
 }
 
@@ -35,25 +35,16 @@ body {
 }
 @keyframes spin {
   0% {
-    transform: scale(0);
+    transform: translateY(100px);
   }
   50% {
-    transform: scale(0.3);
-  }
-  50% {
-    transform: scale(0.6);
+    transform: translateY(30px);
   }
   100% {
-    transform: scale(1);
+    transform: translateY(-20px);
   }
 }
-/* .microlending {
-  background-image: url("./assets/4.png");
-  height: 400px;
-  margin-top: 40px;
 
-  background-repeat: no-repeat, repeat-x, repeat-y;
-} */
 .is-open {
   visibility: visible;
 }
@@ -64,17 +55,6 @@ nav a.active {
   color: purple;
   text-decoration: underline;
 }
-
-/* input::placeholder:after {
-  content: '*';
-  color: red;
-  background-color: red;
-  width: 30%;
-  height: 30%;
-  display: flex;
-  position: absolute;
-  top: 20px;
-} */
 
 ::-webkit-input-placeholder::after {
   content: '*';

@@ -25,7 +25,7 @@ const About = () => {
           className="flex justify-center flex-col p-2
         "
         >
-          <article className="     text-[30px] md:text-[40px] text-purple font-[500] leading-[40px] text-center mt-8 mb-3">
+          <article className="text-[30px] md:text-[40px] text-purple font-[500] leading-[40px] text-center mt-8 mb-3">
             Were changing the way
             <br /> people think about Investment
           </article>
@@ -100,7 +100,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full justify-center m-5 flex ">
+      <section className="w-full justify-center mt-5 flex md:mt-20   md:mb-5 ">
         <div className=" flex justify-center w-[80%] " ref={refObj}>
           {refValue && (
             <div className=" w-full  grid md:grid-cols-3 gap-6 sm:grid-cols-2">
