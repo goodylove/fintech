@@ -119,15 +119,14 @@ const Nav = () => {
               <NavLink to="/services">Service</NavLink>
               <span className="mt-[4px] w-0">
                 <MdOutlineKeyboardArrowDown
-                  onMouseEnter={() => setDropdown(true)}
+                  onClick={() => setDropdown((prev) => !prev)}
                 />
               </span>
             </div>
             <div
               className={`w-[185px] bg-white   text-purple ml-20  rounded-md shadow-md transition ${
                 dropdown ? 'visible' : 'hidden  '
-              }`}
-              onMouseLeave={() => setDropdown(false)}
+              } ${toggleMenu ? '' : 'hidden'}`}
             >
               <ul className="flex flex-col justify-center text-[16px] font-[700] pt-2 ">
                 <li className="pt-2 pb-1 pl-1 hover:p-0">
