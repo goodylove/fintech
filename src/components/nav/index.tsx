@@ -101,7 +101,7 @@ const Nav = () => {
       <div
         className={`  md:hidden ${
           toggleMenu ? 'is-open' : 'is-closed'
-        } flex flex-col items-start   pl-3 w-[50%]  left-0 bg-white  fixed h-[100vh] z-[100] top-[70px] 
+        } flex flex-col items-start   pl-3 w-[57%]  left-0 bg-white  fixed h-[100vh] z-[100] top-[70px] 
         `}
       >
         <ul className="flex flex-col  justify-between  font-[400] text-[18px] leading-[24px] w-[45%]  cursor-pointer">
@@ -124,7 +124,7 @@ const Nav = () => {
               </span>
             </div>
             <div
-              className={`w-[185px] bg-white   text-purple absolute  rounded-md shadow-md transition ${
+              className={`w-[185px] bg-white   text-purple ml-20  rounded-md shadow-md transition ${
                 dropdown ? 'visible' : 'hidden  '
               }`}
               onMouseLeave={() => setDropdown(false)}
