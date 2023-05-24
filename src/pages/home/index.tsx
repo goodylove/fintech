@@ -1,43 +1,43 @@
-import React from "react";
+import React from 'react';
 
-import Button from "../../components/button/index";
+import Button from '../../components/button/index';
 
-import Nav from "../../components/nav/index";
-import img1 from "../../assets/Sankore.png";
-import img2 from "../../assets/client1.png";
-import img3 from "../../assets/client2.png";
-import img4 from "../../assets/client5.png";
-import img5 from "../../assets/client7.png";
-import maskImg from "../../assets/Mask group.png";
-import Bs1 from "../../assets/bstatistic1.png";
-import Bs2 from "../../assets/bstatistic2.png";
-import Bs3 from "../../assets/bstatistc3.png";
-import Bs4 from "../../assets/bstatistc4.png";
-import WhatWeDo from "../../components/whatWeDo/index";
-import FAQ from "../../components/FAQ/index";
-import Footer from "../../components/footer/index";
-import { useElementOnscreen } from "../../components/hooks/useElementOnscreen";
+import Nav from '../../components/nav/index';
+import img1 from '../../assets/Sankore.png';
+import img2 from '../../assets/client1.png';
+import img3 from '../../assets/client2.png';
+import img4 from '../../assets/client5.png';
+import img5 from '../../assets/client7.png';
+import maskImg from '../../assets/Mask group.png';
+import Bs1 from '../../assets/bstatistic1.png';
+import Bs2 from '../../assets/bstatistic2.png';
+import Bs3 from '../../assets/bstatistc3.png';
+import Bs4 from '../../assets/bstatistc4.png';
+import WhatWeDo from '../../components/whatWeDo/index';
+import FAQ from '../../components/FAQ/index';
+import Footer from '../../components/footer/index';
+import { useElementOnscreen } from '../../components/hooks/useElementOnscreen';
 
 function Home() {
   const ref = React.useRef<HTMLDivElement | null>(null);
   const refvalue = useElementOnscreen(ref, {
     root: null,
-    rootMargin: "0px",
+    rootMargin: '0px',
     threshold: 1,
   });
   return (
     <div className="App w-[100%] flex justify-center">
       <div className="w-[100%]">
         {/* section one hero section */}
-        <section className="hero xl:h-[19%] w-full relative md:p-5 p-0 h-[13%] md:h-[15%]">
+        <section className="hero xl:h-[19%] w-full relative md:p-5 p-0 h-[13%] md:h-[16%] ">
           {/* <Nav /> */}
 
-          <div className="h-[97%] flex justify-center flex-col items-start w-full md:pl-[70px] ">
-            <div className="p-[20px] mt-5">
-              <h2 className="leading-[26px] text-[24px] text-white mt-2 ">
+          <div className="h-[97%] flex justify-center flex-col items-start w-full md:pl-[70px]  ">
+            <div className="p-[20px] mt-9">
+              <h2 className="leading-[26px] text-[24px] text-white mt-6 ">
                 We prioritize providing the
               </h2>
-              <div className=" text-[34px] md:text-[40px]  leading-[40px]  md:leading-[50px] text-white md:w-[474px] md:h-[100px] mt-3 font-[700]">
+              <div className=" text-[34px] md:text-[40px]  leading-[40px]  md:leading-[50px] text-white md:w-[474px] md:h-[100px] mt-2 font-[700]">
                 Best Services possible through a Skilled Team
               </div>
               <p className="leading-[24px] text-[16px] text-white md:w-[415px] h-[72px] font-[500] mt-3">
