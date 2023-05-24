@@ -96,3 +96,8 @@ nav a.active {
     opacity: 0.9;
   }
 }
+@media screen and (max-width: 820px) {
+  .map {
+    left: 23%;
+  }
+}

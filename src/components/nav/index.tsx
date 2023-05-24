@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import FoyLogo from "../../assets/logoa 1.png";
-import Button from "../button/index";
-import { Fade as Hamburger } from "hamburger-react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
+import FoyLogo from '../../assets/logoa 1.png';
+import Button from '../button/index';
+import { Fade as Hamburger } from 'hamburger-react';
+import { Link, NavLink } from 'react-router-dom';
 
 // React.FunctionComponent<CommonBurgerProps>
 const Nav = () => {
@@ -16,16 +16,16 @@ const Nav = () => {
     setScrollPage(scrollPosition);
   };
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
   return (
     <nav
       className={`flex flex-col bg-white  h-[71px]  fixed   w-full justify-between items-center  left-0 z-10 ${
-        scrollPage >= 24 ? "top-0 opacity-[1]" : "top-4 opacity-[0.8] "
+        scrollPage >= 24 ? 'top-0 opacity-[1]' : 'top-2 opacity-[0.8] '
       } `}
     >
       <div className="w-full flex justify-between items-center p-3">
@@ -38,7 +38,7 @@ const Nav = () => {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              {" "}
+              {' '}
               <NavLink to="/about">About</NavLink>
             </li>
             <li className="flex items-center justify-center relative">
@@ -50,7 +50,7 @@ const Nav = () => {
               </span>
               <div
                 className={`w-[185px] bg-white   text-purple h-auto absolute top-[20px] z-[-20] left-[0px] rounded-md shadow-md transition ${
-                  dropdown ? "visible" : "hidden  "
+                  dropdown ? 'visible' : 'hidden  '
                 }`}
                 onMouseLeave={() => setDropdown(false)}
               >
@@ -85,7 +85,7 @@ const Nav = () => {
             className="bg-purple text-white w-[167px] h-[50px] rounded"
           />
         </div>
-        <div className="md:hidden pr-3">
+        <div className="md:hidden pr-6">
           <Hamburger
             onToggle={(toggleMenu: boolean) => {
               if (toggleMenu) {
@@ -100,7 +100,7 @@ const Nav = () => {
       {/* mobile */}
       <div
         className={`  md:hidden ${
-          toggleMenu ? "is-open" : "is-closed"
+          toggleMenu ? 'is-open' : 'is-closed'
         } flex flex-col items-center w-[100%]  bg-white absolute] 
         `}
       >
@@ -122,7 +122,7 @@ const Nav = () => {
             </div>
             <div
               className={`w-[185px] bg-white   text-purple absolute  rounded-md shadow-md transition ${
-                dropdown ? "visible" : "hidden  "
+                dropdown ? 'visible' : 'hidden  '
               }`}
               onMouseLeave={() => setDropdown(false)}
             >
