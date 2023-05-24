@@ -23,13 +23,13 @@ const Nav = () => {
     };
   }, []);
   return (
-    <nav
-      className={`flex flex-col bg-white  h-[71px]  fixed   w-full justify-between items-center  left-0 z-10 ${
-        scrollPage >= 24 ? 'top-0 opacity-[1]' : 'top-2 opacity-[0.8] '
-      } `}
-    >
-      <div className="w-full flex justify-between items-center p-3">
-        <div className="md:w-[20%] w-[35%]">
+    <>
+      <nav
+        className={`flex  bg-white  h-[71px]  fixed  md:flex-row   w-full justify-between items-center  left-0 z-10 ${
+          scrollPage >= 24 ? 'top-0 opacity-[1]' : 'top-2 opacity-[0.8] '
+        } `}
+      >
+        <div className="md:w-[20%] w-[35%] pl-4">
           <img src={FoyLogo} alt="log" className="text-purple" />
         </div>
         <div className=" hidden md:flex justify-around  w-[80%]">
@@ -43,7 +43,7 @@ const Nav = () => {
             </li>
             <li className="flex items-center justify-center relative">
               <NavLink to="/services">Service</NavLink>
-              <span className="mt-[2px]">
+              <span className="md:mt-[3px]">
                 <MdOutlineKeyboardArrowDown
                   onMouseEnter={() => setDropdown(true)}
                 />
@@ -96,12 +96,12 @@ const Nav = () => {
             }}
           />
         </div>
-      </div>
-      {/* mobile */}
+        {/* mobile */}
+      </nav>
       <div
         className={`  md:hidden ${
           toggleMenu ? 'is-open' : 'is-closed'
-        } flex flex-col items-center  pl-3 w-[100%]  bg-white absolute] 
+        } flex flex-col items-start   pl-3 w-[50%]  left-0 bg-white  fixed h-[100vh] z-[100] top-[70px] 
         `}
       >
         <ul className="flex flex-col  justify-between  font-[400] text-[18px] leading-[24px] w-[45%]  cursor-pointer">
@@ -111,10 +111,13 @@ const Nav = () => {
           <li className="p-5">
             <NavLink to="/about"> About</NavLink>
           </li>
-          <li className="flex items-center justify-center relative flex-col pr-[40px] sm:pr[28px] p-5 ">
+          <li
+            className="flex items-center justify-center relative flex-col  sm:pr[28px] pl-7 
+           pb-5 pt-5 "
+          >
             <div className="flex pr-[25px]">
               <NavLink to="/services">Service</NavLink>
-              <span className="mt-[2px]">
+              <span className="mt-[4px] w-0">
                 <MdOutlineKeyboardArrowDown
                   onMouseEnter={() => setDropdown(true)}
                 />
@@ -159,7 +162,7 @@ const Nav = () => {
           </li>
         </ul>
       </div>
-    </nav>
+    </>
   );
 };
 

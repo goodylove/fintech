@@ -23,7 +23,7 @@ function Home() {
   const refvalue = useElementOnscreen(ref, {
     root: null,
     rootMargin: '0px',
-    threshold: 1,
+    threshold: 1.0,
   });
   return (
     <div className="App w-[100%] flex justify-center">
@@ -33,11 +33,11 @@ function Home() {
           {/* <Nav /> */}
 
           <div className="h-[97%] flex justify-center flex-col items-start w-full md:pl-[70px]  ">
-            <div className="p-[20px] mt-9">
-              <h2 className="leading-[26px] text-[24px] text-white mt-6 ">
+            <div className="p-[20px] mt-10">
+              <h2 className="leading-[26px] text-[24px] text-white mt-8 ">
                 We prioritize providing the
               </h2>
-              <div className=" text-[34px] md:text-[40px]  leading-[40px]  md:leading-[50px] text-white md:w-[474px] md:h-[100px] mt-2 font-[700]">
+              <div className=" text-[29px] md:text-[40px]  leading-[40px]  md:leading-[50px] text-white md:w-[474px] md:h-[100px] mt-2 font-[700]">
                 Best Services possible through a Skilled Team
               </div>
               <p className="leading-[24px] text-[16px] text-white md:w-[415px] h-[72px] font-[500] mt-3">
