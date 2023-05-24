@@ -1,21 +1,21 @@
-import React, { useRef } from "react";
-import Investment from "./../../components/investment/index";
-import abtImg from "../../assets/1.png";
-import exeImg from "../../assets/excellence.png";
-import integretImg from "../../assets/integration.png";
-import proImg from "../../assets/professional-services.png";
-import phlisoImg from "../../assets/philosophy 1.png";
-import vision from "../../assets/vision 1.png";
-import vision2 from "../../assets/target 1.png";
-import Footer from "./../../components/footer/index";
-import { useElementOnscreen } from "../../components/hooks/useElementOnscreen";
+import React, { useRef } from 'react';
+import Investment from './../../components/investment/index';
+import abtImg from '../../assets/1.png';
+import exeImg from '../../assets/excellence.png';
+import integretImg from '../../assets/integration.png';
+import proImg from '../../assets/professional-services.png';
+import phlisoImg from '../../assets/philosophy 1.png';
+import vision from '../../assets/vision 1.png';
+import vision2 from '../../assets/target 1.png';
+import Footer from './../../components/footer/index';
+import { useElementOnscreen } from '../../components/hooks/useElementOnscreen';
 
 const About = () => {
   const refObj = useRef<HTMLDivElement>(null);
 
   const refValue = useElementOnscreen(refObj, {
     root: null,
-    rootMargin: "0px",
+    rootMargin: '0px',
     threshold: 1,
   });
   return (
@@ -25,7 +25,7 @@ const About = () => {
           className="flex justify-center flex-col p-2
         "
         >
-          <article className="text-[40px] text-purple font-[500] leading-[40px] text-center mt-3 mb-3">
+          <article className="     text-[30px] md:text-[40px] text-purple font-[500] leading-[40px] text-center mt-8 mb-3">
             Were changing the way
             <br /> people think about Investment
           </article>

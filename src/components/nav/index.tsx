@@ -101,7 +101,7 @@ const Nav = () => {
       <div
         className={`  md:hidden ${
           toggleMenu ? 'is-open' : 'is-closed'
-        } flex flex-col items-center w-[100%]  bg-white absolute] 
+        } flex flex-col items-center  pl-3 w-[100%]  bg-white absolute] 
         `}
       >
         <ul className="flex flex-col  justify-between  font-[400] text-[18px] leading-[24px] w-[45%]  cursor-pointer">
@@ -111,7 +111,7 @@ const Nav = () => {
           <li className="p-5">
             <NavLink to="/about"> About</NavLink>
           </li>
-          <li className="flex items-center justify-center relative flex-col pr-[54px] sm:pr[28px] ">
+          <li className="flex items-center justify-center relative flex-col pr-[40px] sm:pr[28px] p-5 ">
             <div className="flex pr-[25px]">
               <NavLink to="/services">Service</NavLink>
               <span className="mt-[2px]">
