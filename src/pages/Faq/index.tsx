@@ -1,6 +1,6 @@
-import Footer from "./../../components/footer/index";
-import FAQ from "./../../components/FAQ/index";
-import Button from "./../../components/button/index";
+import Footer from './../../components/footer/index';
+import FAQ from './../../components/FAQ/index';
+import Button from './../../components/button/index';
 const FaqPage = () => {
   return (
     <main className="w-full">
@@ -30,10 +30,12 @@ const FaqPage = () => {
                 friendly team.
               </span>
             </div>
-            <Button
-              text="Get in touch"
-              className="rounded text-black bg-white p-2 font-[700] mt-3"
-            />
+            <a href="tel:+2349116894070">
+              <Button
+                text="Get in touch"
+                className="rounded text-black bg-white p-2 font-[700] mt-3"
+              />
+            </a>
           </div>
         </div>
       </section>
