@@ -1,18 +1,18 @@
-import React from "react";
-import Home from "./pages/home/index";
-import { Route, Routes } from "react-router-dom";
-import Nav from "./components/nav/index";
-import "./App.css";
-import About from "./pages/about/index";
-import Services from "./pages/Services/index";
-import FaqPage from "./pages/Faq";
-import Contact from "./pages/contact/index";
-import ErrorPage from "./pages/error/index";
-import Microlending from "./pages/microlending/index";
-import InvestmentPage from "./pages/investmentpage";
-import Procurment from "./pages/procurment/index";
-import Bdc from "./pages/bdc/index";
-import RealEstate from "./pages/realestate/index";
+import React from 'react';
+import Home from './pages/home/index';
+import { Route, Routes } from 'react-router-dom';
+import Nav from './components/nav/index';
+import About from './pages/about/index';
+import Services from './pages/Services/index';
+import FaqPage from './pages/Faq';
+import Contact from './pages/contact/index';
+import ErrorPage from './pages/error/index';
+import Microlending from './pages/microlending/index';
+import InvestmentPage from './pages/investmentpage';
+import Procurment from './pages/procurment/index';
+import Bdc from './pages/bdc/index';
+import RealEstate from './pages/realestate/index';
+import './App.css';
 
 function App() {
   return (

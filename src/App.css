@@ -12,7 +12,7 @@ body {
   overflow-x: hidden;
 }
 .hero {
-  background-image: url("./assets/bg.png"), url("./assets/african-american.png");
+  background-image: url('./assets/bg.png'), url('./assets/african-american.png');
 
   background-repeat: no-repeat, repeat-x, repeat-y;
 }
@@ -67,10 +67,32 @@ nav a.active {
   color: purple;
   text-decoration: underline;
 }
+
+/* input::placeholder:after {
+  content: '*';
+  color: red;
+  background-color: red;
+  width: 30%;
+  height: 30%;
+  display: flex;
+  position: absolute;
+  top: 20px;
+} */
+
+::-webkit-input-placeholder::after {
+  content: '*';
+  color: red;
+  background-color: red;
+  position: absolute;
+  left: 20px;
+  height: 30%;
+  width: 30%;
+  top: 3px;
+}
 @media screen and (max-width: 768px) {
   .hero {
-    background-image: url("./assets/african-american.png"),
-      url("./assets/bg.png");
+    background-image: url('./assets/african-american.png'),
+      url('./assets/bg.png');
     opacity: 0.9;
   }
 }
