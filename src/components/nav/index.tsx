@@ -111,7 +111,7 @@ const Nav = () => {
           <li className="p-5">
             <NavLink to="/about"> About</NavLink>
           </li>
-          <li className="flex items-center justify-center relative flex-col pr-[28px] ">
+          <li className="flex items-center justify-center relative flex-col pr-[54px] sm:pr[28px] ">
             <div className="flex pr-[25px]">
               <NavLink to="/services">Service</NavLink>
               <span className="mt-[2px]">
