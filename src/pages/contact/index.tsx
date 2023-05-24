@@ -199,7 +199,7 @@ const Contact = () => {
 
           <div className="relative w-[300px] md:h-[300px] h-[400px] flex  justify-center items-center mt-[34px]">
             <div>
-              <div className="absolute w-[300px] z-[-1] top-[3px] md:top-[-57px]  md:left-[56%] left-[44%] h-[450px] bg-[#000000]"></div>
+              <div className="absolute w-[300px] z-[-1] top-[3px] md:top-[-57px]  xl:left-[40%] md:left-[24%] left-[22%] h-[450px] bg-[#000000]"></div>
               <div className="flex justify-center items-center ml-[72px]">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.592436729659!2d3.4215826735249326!3d6.446342124058217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4d3d091cf7d%3A0x9a5754027405dea1!2s19%20Okotie%20Eboh%20Cl%2C%20Ikoyi%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1684851435349!5m2!1sen!2sng"
