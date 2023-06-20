@@ -4,12 +4,17 @@ import FoyLogo from '../../assets/logoa 1.png';
 import Button from '../button/index';
 import { Fade as Hamburger } from 'hamburger-react';
 import { Link, NavLink } from 'react-router-dom';
+import Hambuger from '../Hambuger/index';
 
 // React.FunctionComponent<CommonBurgerProps>
 const Nav = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [scrollPage, setScrollPage] = useState(0);
   const [dropdown, setDropdown] = useState(false);
+
+  const handleToggleMenu = () => {
+    setToggleMenu((prev) => !prev);
+  };
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
@@ -85,16 +90,8 @@ const Nav = () => {
             className="bg-purple text-white w-[167px] h-[50px] rounded"
           />
         </div>
-        <div className="md:hidden pr-6">
-          <Hamburger
-            onToggle={(toggleMenu: boolean) => {
-              if (toggleMenu) {
-                setToggleMenu(true);
-              } else {
-                setToggleMenu(false);
-              }
-            }}
-          />
+        <div className="md:hidden pr-6" onClick={handleToggleMenu}>
+          <Hambuger isOpen={toggleMenu} />
         </div>
         {/* mobile */}
       </nav>
@@ -105,10 +102,10 @@ const Nav = () => {
         `}
       >
         <ul className="flex flex-col  justify-between  font-[400] text-[18px] leading-[24px] w-[45%]  cursor-pointer">
-          <li className="p-5">
+          <li className="p-5" onClick={handleToggleMenu}>
             <NavLink to="/"> Home</NavLink>
           </li>
-          <li className="p-5">
+          <li className="p-5" onClick={handleToggleMenu}>
             <NavLink to="/about"> About</NavLink>
           </li>
           <li
@@ -129,31 +126,46 @@ const Nav = () => {
               } ${toggleMenu ? '' : 'hidden'}`}
             >
               <ul className="flex flex-col justify-center text-[16px] font-[700] pt-2 ">
-                <li className="pt-2 pb-1 pl-1 hover:p-0">
+                <li
+                  className="pt-2 pb-1 pl-1 hover:p-0"
+                  onClick={handleToggleMenu}
+                >
                   <Link to="services/microlending">Microlending</Link>
                 </li>
-                <li className="pt-2 pb-1 pl-1 hover:p-0">
+                <li
+                  className="pt-2 pb-1 pl-1 hover:p-0"
+                  onClick={handleToggleMenu}
+                >
                   <Link to="services/bdc">Bureau-de-change(BDC)</Link>
                 </li>
-                <li className="pt-1 pb-1 pl-1 hover:p-0">
+                <li
+                  className="pt-1 pb-1 pl-1 hover:p-0"
+                  onClick={handleToggleMenu}
+                >
                   <Link to="services/investmentpage">Investments</Link>
                 </li>
-                <li className="pt-1 pb-1 pl-1 hover:p-0">
+                <li
+                  className="pt-1 pb-1 pl-1 hover:p-0 "
+                  onClick={handleToggleMenu}
+                >
                   <Link to="services/realestate"> Real Estate</Link>
                 </li>
-                <li className="pt-1 pb-1 pl-1 hover:p-0">
+                <li
+                  className="pt-1 pb-1 pl-1 hover:p-0"
+                  onClick={handleToggleMenu}
+                >
                   <Link to="services/procurment">Procurement</Link>
                 </li>
               </ul>
             </div>
           </li>
-          <li className="p-5">
+          <li className="p-5" onClick={handleToggleMenu}>
             <NavLink to="/faqpage">FAQ</NavLink>
           </li>
-          <li className="p-5">
+          <li className="p-5" onClick={handleToggleMenu}>
             <NavLink to="/contact"> Contact</NavLink>
           </li>
-          <li className="mb-2">
+          <li className="mb-2" onClick={handleToggleMenu}>
             <Button
               text="Apply now"
               className="bg-purple text-white w-[130px] h-[40px] rounded  "
