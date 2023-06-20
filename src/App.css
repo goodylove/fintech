@@ -6,7 +6,7 @@
 }
 
 body {
-  transition: 0.3s ease;
+  /* transition: 0.3s ease; */
   overflow-x: hidden;
 }
 
@@ -15,7 +15,7 @@ body {
 
   background-repeat: no-repeat, repeat-x, repeat-y;
 }
-.anmi {
+/* .anmi {
   animation: spin 0.5s forwards;
 }
 .business {
@@ -43,7 +43,7 @@ body {
   100% {
     transform: translateY(-20px);
   }
-}
+} */
 
 .is-open {
   visibility: visible;

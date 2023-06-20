@@ -16,15 +16,8 @@ import Bs4 from '../../assets/bstatistc4.png';
 import WhatWeDo from '../../components/whatWeDo/index';
 import FAQ from '../../components/FAQ/index';
 import Footer from '../../components/footer/index';
-import { useElementOnscreen } from '../../components/hooks/useElementOnscreen';
 
 function Home() {
-  const ref = React.useRef<HTMLDivElement | null>(null);
-  const refvalue = useElementOnscreen(ref, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 1.0,
-  });
   return (
     <div className="App w-[100%] flex justify-center">
       <div className="w-[100%]">
@@ -136,49 +129,41 @@ function Home() {
             <h3 className="text-center p-1 text-white text-[30px] font-[500]">
               Business Statistics
             </h3>
-            <div
-              className="grid md:grid-cols-4   xl:grid-cols-4  sm:grid-cols-2  grid-cols-2 gap-4  mt-5 p-1 "
-              ref={ref}
-            >
-              {refvalue && (
-                <div className="flex flex-col justify-center items-center business">
-                  <img src={Bs1} alt="" />
-                  <span className="text-white font-[800] text-3xl">100+</span>
-                  <span className="text-white md:text-[18px] text-[13px] leading-[22px] font-[500]">
-                    people support
-                  </span>
-                </div>
-              )}
-              {refvalue && (
-                <div className="flex flex-col justify-center items-center business">
-                  <img src={Bs2} alt="" />
-                  <span className="text-white font-[800] text-3xl">100+</span>
+            <div className="grid md:grid-cols-4   xl:grid-cols-4  sm:grid-cols-2  grid-cols-2 gap-4  mt-5 p-1 ">
+              <div className="flex flex-col justify-center items-center business">
+                <img src={Bs1} alt="" />
+                <span className="text-white font-[800] text-3xl">100+</span>
+                <span className="text-white md:text-[18px] text-[13px] leading-[22px] font-[500]">
+                  people support
+                </span>
+              </div>
 
-                  <span className="text-white md:text-[18px] text-[13px] leading-[22px] font-[500]">
-                    Advisory
-                  </span>
-                </div>
-              )}
-              {refvalue && (
-                <div className="flex flex-col justify-center items-center business">
-                  <img src={Bs3} alt="" />
-                  <span className="text-white font-[800] text-3xl">100+</span>
+              <div className="flex flex-col justify-center items-center business">
+                <img src={Bs2} alt="" />
+                <span className="text-white font-[800] text-3xl">100+</span>
 
-                  <span className="text-white md:text-[18px] text-[13px] leading-[22px] font-[500]">
-                    satifield client
-                  </span>
-                </div>
-              )}
-              {refvalue && (
-                <div className="flex flex-col justify-center items-center business">
-                  <img src={Bs4} alt="" />
-                  <span className="text-white font-[900] text-3xl">100+</span>
+                <span className="text-white md:text-[18px] text-[13px] leading-[22px] font-[500]">
+                  Advisory
+                </span>
+              </div>
 
-                  <span className="text-white md:text-[18px] text-[13px] leading-[22px] font-[500]">
-                    completed transaction
-                  </span>
-                </div>
-              )}
+              <div className="flex flex-col justify-center items-center business">
+                <img src={Bs3} alt="" />
+                <span className="text-white font-[800] text-3xl">100+</span>
+
+                <span className="text-white md:text-[18px] text-[13px] leading-[22px] font-[500]">
+                  satifield client
+                </span>
+              </div>
+
+              <div className="flex flex-col justify-center items-center business">
+                <img src={Bs4} alt="" />
+                <span className="text-white font-[900] text-3xl">100+</span>
+
+                <span className="text-white md:text-[18px] text-[13px] leading-[22px] font-[500]">
+                  completed transaction
+                </span>
+              </div>
             </div>
           </div>
         </section>

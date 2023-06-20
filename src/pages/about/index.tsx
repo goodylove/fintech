@@ -11,13 +11,6 @@ import Footer from './../../components/footer/index';
 import { useElementOnscreen } from '../../components/hooks/useElementOnscreen';
 
 const About = () => {
-  const refObj = useRef<HTMLDivElement>(null);
-
-  const refValue = useElementOnscreen(refObj, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 1,
-  });
   return (
     <main className="w-full">
       <section className="mt-5 md:h-[25%] flex justify-center items-center h-[13%]  ">
@@ -101,46 +94,42 @@ const About = () => {
       </section>
 
       <section className="w-full justify-center mt-5 flex md:mt-20   md:mb-5 ">
-        <div className=" flex justify-center w-[80%] " ref={refObj}>
-          {refValue && (
-            <div className=" w-full  grid md:grid-cols-3 gap-6 sm:grid-cols-2">
-              <div className="bg-grey md:w-[330px] w-[264px] rounded p-5 anmi">
-                <img src={phlisoImg} alt="" />
-                <h5 className="text-[30px] mt-4 mb-4 font-[700]">
-                  Our Philosophy
-                </h5>
-                <span className="leading-[30px] text-[16px]">
-                  Our company thrives on a strong business culture built on time
-                  trusted principles such as integrity, excellent service
-                  delivery, and professionalism. This positions us to constantly
-                  harness opportunities in diverse sectors, promoting value
-                  addition, wealth creation and preservation.
-                </span>
-              </div>
-
-              <div className="bg-grey md:w-[330px] w-[264px] rounded p-5 anmi">
-                <img src={vision} alt="" />
-                <h5 className="text-[30px] mt-4 mb-4 font-[700]">Our Vision</h5>
-                <span className="leading-[30px] text-[16px]">
-                  To become a global brand that adds sustainable value to all
-                  stakeholders.
-                </span>
-              </div>
-
-              <div className="bg-grey md:w-[330px] md:h-[400px] w-[264px] rounded p-5 anmi">
-                <img src={vision2} alt="" />
-                <h5 className="text-[30px] mt-4 mb-4 font-[700]">
-                  Our Mission
-                </h5>
-                <span className="leading-[30px] text-[16px]">
-                  To constantly harness opportunities in diverse sectors while
-                  promoting value addition, and sustainable wealth creation for
-                  the satisfaction of all stakeholders through a dedicated
-                  workforce.
-                </span>
-              </div>
+        <div className=" flex justify-center w-[80%] ">
+          <div className=" w-full  grid md:grid-cols-3 gap-6 sm:grid-cols-2">
+            <div className="bg-grey md:w-[330px] w-[264px] rounded p-5 anmi">
+              <img src={phlisoImg} alt="" />
+              <h5 className="text-[30px] mt-4 mb-4 font-[700]">
+                Our Philosophy
+              </h5>
+              <span className="leading-[30px] text-[16px]">
+                Our company thrives on a strong business culture built on time
+                trusted principles such as integrity, excellent service
+                delivery, and professionalism. This positions us to constantly
+                harness opportunities in diverse sectors, promoting value
+                addition, wealth creation and preservation.
+              </span>
             </div>
-          )}
+
+            <div className="bg-grey md:w-[330px] w-[264px] rounded p-5 anmi">
+              <img src={vision} alt="" />
+              <h5 className="text-[30px] mt-4 mb-4 font-[700]">Our Vision</h5>
+              <span className="leading-[30px] text-[16px]">
+                To become a global brand that adds sustainable value to all
+                stakeholders.
+              </span>
+            </div>
+
+            <div className="bg-grey md:w-[330px] md:h-[400px] w-[264px] rounded p-5 anmi">
+              <img src={vision2} alt="" />
+              <h5 className="text-[30px] mt-4 mb-4 font-[700]">Our Mission</h5>
+              <span className="leading-[30px] text-[16px]">
+                To constantly harness opportunities in diverse sectors while
+                promoting value addition, and sustainable wealth creation for
+                the satisfaction of all stakeholders through a dedicated
+                workforce.
+              </span>
+            </div>
+          </div>
         </div>
       </section>
       <Footer />
