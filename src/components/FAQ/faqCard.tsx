@@ -1,24 +1,35 @@
-import { useState } from "react";
+import { useState } from 'react';
 import {
   MdOutlineKeyboardArrowRight,
   MdOutlineKeyboardArrowDown,
-} from "react-icons/md";
+} from 'react-icons/md';
 
 type FaqProps = {
   answer: string;
   question: string;
+  onToggle: number;
+  id: number;
+  onHandleToggle: (num: number) => void;
 };
 
-const FaqCard = ({ answer, question }: FaqProps) => {
-  const [toggle, setToggle] = useState(false);
+const FaqCard = ({
+  answer,
+  question,
+  onToggle,
+  onHandleToggle,
+  id,
+}: FaqProps) => {
+  const isOpen = id === onToggle;
+
   const handleToggle = () => {
-    setToggle((prev) => !prev);
+    let num = isOpen ? 0 : id;
+    onHandleToggle(num);
   };
   return (
     <div className="md:m-[30px] m-[10px]">
       <div
         className={`md:p-7  rounded-[14px]  shadow-lg m-5 p-3 ${
-          toggle ? "border-purple border-2" : "border-none"
+          isOpen ? 'border-purple border-2' : 'border-none'
         }`}
       >
         <span className="flex justify-between items-center">
@@ -28,17 +39,17 @@ const FaqCard = ({ answer, question }: FaqProps) => {
           <span
             onClick={handleToggle}
             className={`text-[60px] rounded-full h-[50px] w-[50px] flex justify-center items-center shadow-md p-3 ${
-              toggle ? "bg-purple text-white" : "bg-white text-purple"
+              isOpen ? 'bg-purple text-white' : 'bg-white text-purple'
             } `}
           >
-            {toggle ? (
+            {isOpen ? (
               <MdOutlineKeyboardArrowDown />
             ) : (
               <MdOutlineKeyboardArrowRight />
             )}
           </span>
         </span>
-        <div className={`${toggle ? "visible" : "hidden"}`}>
+        <div className={`${isOpen ? 'visible' : 'hidden'}`}>
           <p className="text-[14px] md:w-[636px] w-full">{answer}</p>
         </div>
       </div>
